@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مرحله ۴: پرداخت هزینه</title>
+<style>
+@font-face {
+    font-family: 'Morabba-Medium';
+    src: url(Morabba-Medium.ttf) format('truetype'); /* مسیر فایل فونت نسبت به HTML */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'Morabba-Medium', Tahoma, sans-serif; margin:0; padding:0; direction: rtl; background:#f9f9f9; }
+header { background:#0056b3; color:white; padding:15px 20px; display:flex; align-items:center; justify-content:space-between;}
+header img { height:50px; }
+nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+h2 { text-align:center; margin-top:30px; color:#333; }
+.step { max-width:700px; margin:20px auto; padding:20px; background:#fff; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.1);}
+.payment-options { display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:20px; }
+.payment-card { width:180px; padding:15px; margin:10px; border-radius:12px; text-align:center; background:#f0f0f0; cursor:pointer; transition: all 0.3s ease; }
+.payment-card:hover, .payment-card.active { transform: scale(1.03); box-shadow:0 0 10px rgba(0,0,0,0.2); }
+.pay-btn { display:block; margin:30px auto; background:#0056b3; color:white; border:none; padding:12px 20px; border-radius:8px; font-weight:bold; cursor:pointer; text-align:center; width:200px; opacity:0.6; pointer-events:none; }
+.pay-btn.active { opacity:1; pointer-events:auto; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="image.png" alt="لوگو">
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="step1.html">ثبت سفارش خدمات</a>
+    <a href="contact.html">تماس با ما</a>
+    <a href="about.html" class="active">درباره ما</a>
+  </nav>
+</header>
+
+<style>
+header {
+  background:#0056b3;
+  color:white;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* منو وسط */
+  gap:50px; /* فاصله بین لوگو و لینک‌ها */
+}
+
+body {
+  font-family: "Morabba-Medium", Tahoma, sans-serif;
+  margin:0;
+  padding:0;
+  direction: rtl;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ابتدا همه وسط */
+  position: relative;
+  padding: 15px 40px;
+  background:#007bff;
+}
+
+/* منو وسط هدر */
+.center-nav {
+  display: flex;
+  gap: 40px; /* فاصله بین لینک‌ها */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* وسط هدر */
+}
+
+.center-nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px 0;
+}
+
+.center-nav a:hover {
+  text-decoration: underline;
+}
+
+/* لوگو سمت راست */
+header .logo {
+  height: 50px;
+  margin-left: auto; /* برای قرار گرفتن سمت راست */
+}
+</style>
+
+<h2>مرحله ۴: پرداخت هزینه</h2>
+<div class="step payment-options">
+<div class="payment-card" data-payment="پرداخت حضوری">پرداخت حضوری</div>
+<div class="payment-card" data-payment="پرداخت اینترنتی">پرداخت اینترنتی</div>
+<div class="payment-card" data-payment="کارت به کارت">کارت به کارت</div>
+</div>
+
+<button class="pay-btn" id="nextBtn">مرحله بعد</button>
+
+<script>
+const cards = document.querySelectorAll('.payment-card');
+const nextBtn = document.getElementById('nextBtn');
+let selectedPayment = localStorage.getItem('paymentMethod') || '';
+
+cards.forEach(card => {
+    if(card.dataset.payment === selectedPayment) card.classList.add('active');
+    card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedPayment = card.dataset.payment;
+        localStorage.setItem('paymentMethod', selectedPayment);
+        nextBtn.classList.add('active');
+    });
+});
+
+if(selectedPayment) nextBtn.classList.add('active');
+
+nextBtn.addEventListener('click', () => {
+    window.location.href = 'step5.html';
+});
+</script>
+
+</body>
+</html>

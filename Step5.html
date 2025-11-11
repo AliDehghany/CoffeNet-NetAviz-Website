@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مرحله ۵: پیش‌فاکتور</title>
+<style>
+@font-face {
+    font-family: 'Morabba-Medium';
+    src: url(Morabba-Medium.ttf) format('truetype'); /* مسیر فایل فونت نسبت به HTML */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'Morabba-Medium', Tahoma, sans-serif; margin:0; padding:0; direction: rtl; background:#f9f9f9; }
+header { background:#0056b3; color:white; padding:15px 20px; display:flex; align-items:center; justify-content:space-between;}
+header img { height:50px; }
+nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+h2 { text-align:center; margin-top:30px; color:#333; }
+.step { max-width:600px; margin:20px auto; padding:20px; background:#e0e0e0; border:1px solid #b0b0b0; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.1);}
+.next-btn { display:block; margin:30px auto; padding:12px 25px; background:#0056b3; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; text-decoration:none; text-align:center; width:200px; }
+.next-btn:hover { background:#0056b3; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="image.png" alt="لوگو">
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="step1.html">ثبت سفارش خدمات</a>
+    <a href="contact.html">تماس با ما</a>
+    <a href="about.html" class="active">درباره ما</a>
+  </nav>
+</header>
+
+<style>
+header {
+  background:#0056b3;
+  color:white;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* منو وسط */
+  gap:50px; /* فاصله بین لوگو و لینک‌ها */
+}
+
+body {
+  font-family: "Morabba-Medium", Tahoma, sans-serif;
+  margin:0;
+  padding:0;
+  direction: rtl;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ابتدا همه وسط */
+  position: relative;
+  padding: 15px 40px;
+  background:#007bff;
+}
+
+/* منو وسط هدر */
+.center-nav {
+  display: flex;
+  gap: 40px; /* فاصله بین لینک‌ها */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* وسط هدر */
+}
+
+.center-nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px 0;
+}
+
+.center-nav a:hover {
+  text-decoration: underline;
+}
+
+/* لوگو سمت راست */
+header .logo {
+  height: 50px;
+  margin-left: auto; /* برای قرار گرفتن سمت راست */
+}
+</style>
+
+<h2>مرحله ۵: پیش‌فاکتور</h2>
+<div class="step" id="invoice">
+<p>در حال بارگذاری اطلاعات...</p>
+</div>
+
+<a href="step6.html" class="next-btn" id="nextBtn">مرحله بعد</a>
+
+<script>
+const invoice = document.getElementById('invoice');
+const nextBtn = document.getElementById('nextBtn');
+
+// بارگذاری اطلاعات از localStorage
+const name = localStorage.getItem('name') || '';
+const phone = localStorage.getItem('phone') || '';
+const serviceType = localStorage.getItem('serviceType') || '';
+const details = localStorage.getItem('details') || '';
+const deliveryMethod = localStorage.getItem('deliveryMethod') || '';
+const paymentMethod = localStorage.getItem('paymentMethod') || '';
+const total = "45,000 تومان"; // مثال
+
+inv.innerHTML = 
+  <div>
+    <h2>خلاصه سفارش</h2>
+    <dl>
+      <dt>نام و نام خانوادگی:</dt><dd>${name}</dd>
+      <dt>شماره تماس:</dt><dd>${phone}</dd>
+      <dt>نوع خدمت:</dt><dd>${service}</dd>
+      <dt>توضیحات:</dt><dd>${details || '—'}</dd>
+      <dt>روش تحویل:</dt><dd>${delivery}</dd>
+      <dt>روش پرداخت:</dt><dd>${payment}</dd>
+      <dt>جمع کل:</dt><dd>${total}</dd>
+    </dl>
+  </div>
+;
+;
+</script>
+
+</body>
+</html>
