@@ -1,0 +1,150 @@
+/* تنظیمات پایه برای خوانایی بهتر در زبان فارسی */
+body {
+    font-family: Morabba-Medium;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    direction: rtl; /* برای جهت متن فارسی */
+    text-align: right;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+nav ul li a.active {
+    background-color: transparent;
+    
+}
+
+nav ul li a.active:hover {
+    background-color: #0056b3;
+}
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* استایل دهی فرم تماس */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* برای اینکه padding به پهنای کلی اضافه نشود */
+}
+
+.form-group textarea {
+    resize: vertical; /* فقط امکان تغییر ارتفاع */
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* سبز برای دکمه ارسال */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+.map-container {
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+:root {
+    --color-primary: #1E88E5;
+    --color-secondary: #90CAF9;
+    --color-accent: #F9A825;
+    --color-bg-neutral: #F5F5F5;
+    --color-text-primary: #212121;
+  }
+  
+  /* نمونه استفاده */
+  body {
+    background-color: var(--color-bg-neutral);
+    color: var(--color-text-primary);
+  }
+  
+  button.primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+  
+  button.accent {
+    background-color: var(--color-accent);
+    color: #ffffff;
+  }

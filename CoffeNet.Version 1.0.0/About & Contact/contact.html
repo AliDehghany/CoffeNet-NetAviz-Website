@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - کافی‌نت نت‌آویز</title>
+    <link rel="stylesheet" href="../Style-Css/style.css">
+</head>
+<body>
+    <style>
+    @font-face {
+      font-family: "Morabba";
+      src: url("../Font/Morabba-Medium.ttf") format("truetype");
+    }
+
+    body {
+      font-family: "Morabba", sans-serif;}
+    </style>
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">صفحه اصلی</a></li>
+                <li><a href="../Place An Order/Step1.html">ثبت سفارش خدمات</a></li>
+                <li><a href="../About & Contact/about.html">درباره ما</a></li>
+                <li><a href="../About & Contact/contact.html" class="active">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h1>تماس با کافی‌نت نت‌آویز</h1>
+        <section class="contact-info">
+            <h2>اطلاعات تماس</h2>
+            <p><strong>آدرس:</strong> اصفهان، شهر جدید بهارستان، [نام خیابان]، [شماره پلاک].</p>
+            <p><strong>شماره تماس:</strong> 031-36840010 (جهت پیگیری سفارشات)</p>
+            <p><strong>ایمیل:</strong> cofeenetaviz@gmail.com</p>
+            <p><strong>ساعات کاری:</strong> شنبه تا پنجشنبه: ۹:۰۰ الی ۲۰:۰۰</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.878170243178!2d51.78018651478239!3d32.55393528103986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc17387d81a957%3A0xf639d6e5c544d673!2sBaharestan%20New%20City!5e0!3m2!1sen!2sir!4v1688755000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>ارسال پیام</h2>
+            <form action="#" method="POST"> <div class="form-group">
+                    <label for="name">نام و نام خانوادگی:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ایمیل:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">شماره تماس (اختیاری):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">موضوع پیام:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">انتخاب کنید...</option>
+                        <option value="tracking">پیگیری سفارش</option>
+                        <option value="cooperation">همکاری و پیشنهادات</option>
+                        <option value="general">سوالات عمومی</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">متن پیام:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit">ارسال پیام</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ۱۴۰۲ کافی‌نت نت‌آویز - تمام حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
