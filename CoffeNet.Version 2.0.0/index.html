@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کافی نت آنلاین</title>
+<link rel="stylesheet" href="../Style-Css/style.css"> 
+<style>
+/* فونت Morabba-Medium */
+@font-face {
+  font-family: 'Morabba-Medium';
+  src: url('Font/Morabba-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Morabba-Medium', Tahoma, sans-serif;
+  margin:0; padding:0;
+  direction: rtl;
+  background:#f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* هدر */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15px 40px;
+  background:#007bff;
+  color:white;
+}
+
+/* لوگو سمت راست */
+header img {
+  position: absolute;
+  height:50px;
+  right: 20px;
+}
+
+/* منو وسط هدر */
+header nav ul {
+  display: flex;
+  justify-content: center; /* وسط چین کردن لینک‌ها */
+  gap: 40px;               /* فاصله بین لینک‌ها */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px 0;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align:center;
+  margin-top:50px;
+  color:#333;
+}
+
+.hero {
+  text-align:center;
+  margin:30px auto;
+  font-size:1.3em;
+  color:#555;
+}
+
+.btn {
+  background:#007bff;
+  color:white;
+  padding:12px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:40px;
+}
+main{
+  flex : 1;
+  padding-bottom: 20px;
+}
+
+
+html, body{
+height: 100%;
+margin: 0;
+}
+
+
+
+
+
+footer {
+    background: #007bff;
+    color: white;
+    padding: 20px 20px ;
+    font-family: 'Morabba-Medium', Tahoma, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wr1ap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-info, .footer-links {
+    flex: 1;
+    min-width: 240px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="Image/image.png" alt="لوگو">
+  <nav>
+    <ul>
+      <li><a href="index.html">صفحه اصلی</a></li>
+      <li><a href="Place An Order/Step1.html">سفارش آنلاین</a></li>
+      <li><a href="../Login Page/login.html">ورود</a></li>
+      <li><a href="About & Contact/about.html">درباره ما</a></li>
+      <li><a href="About & Contact/contact.html" class="active">تماس با ما</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<h1>به کافی نت آنلاین خوش آمدید</h1>
+<p class="hero">با نت آویز همیشه تو دستت ویز خوبه!</p>
+
+<div style="text-align:center;">
+  <a href="Place An Order/Step1.html" class="btn">ثبت سفارش</a>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-info">
+          <h3>کافی‌نت ما</h3>
+          <p>آدرس:بهارستان،خیابان الفت‌شرقی،چهارراه آزادی، بازاچه فیروزه، کافی‌نت نت آویز</p>
+          <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+          <p>ایمیل: coffenetaviz@gmail.com</p>
+      </div>
+      <div class="footer-links">
+          <h3>لینک‌های سریع</h3>
+          <ul>
+              <li><a href="index.html">خانه</a></li>
+              <li><a href="Place An Order/Step1.html">سفارش چاپ</a></li>
+              <li><a href="About & Contact/contact.html">تماس با ما</a></li>
+              <li><a href="About & Contact/about.html">درباره ما</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>© 2025 کافی‌نت ما. همه حقوق محفوظ است.</p>
+  </div>
+</footer>
+
+</body>
+</html>
