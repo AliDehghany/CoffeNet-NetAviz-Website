@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مرحله ۲: آپلود فایل</title>
+<link rel="stylesheet" href="../Style-Css/style.css"> 
+<style>
+@font-face {
+    font-family: 'Morabba-Medium';
+    src: url(../Font/Morabba-Medium.ttf) format('truetype'); /* مسیر فایل فونت نسبت به HTML */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'Morabba-Medium', Tahoma, sans-serif; margin:0; padding:0; direction: rtl; background:#f9f9f9; }
+header { background:#0056b3; color:white; padding:15px 20px; display:flex; align-items:center; justify-content:space-between;}
+header img { height:50px; }
+nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+h2 { text-align:center; margin-top:30px; color:#333; }
+.step { max-width:600px; margin:20px auto; padding:20px; background:#fff; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.1);}
+form { display:flex; flex-direction:column; gap:15px; }
+input, select, textarea { padding:10px; border-radius:8px; border:1px solid #ccc; font-size:16px; }
+textarea { resize: vertical; }
+.upload-btn { background:#ff9800; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; font-weight:bold; width:200px; text-align:center; margin:auto; opacity:0.6; pointer-events:none; }
+.upload-btn.active { opacity:1; pointer-events:auto; }
+</style>
+</head>
+<body>
+
+  <header>
+    <img src="../Image/image.png" alt="لوگو">
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="btn-primary-fillerd">صفحه اصلی</a></li>
+            <li><a href="../Place An Order/Step1.html" class="btn-primary-fillerd">سفارش آنلاین</a></li>
+            <li><a href="../About & Contact/about.html" class="btn-primary-fillerd">درباره ما</a></li>
+            <li><a href="../About & Contact/contact.html" class="active" class="btn-primary-fillerd">تماس با ما</a></li>
+        </ul>
+    </nav>
+  </header>
+
+
+<style>
+header {
+  background:#0056b3;
+  color:white;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* منو وسط */
+  gap:50px; /* فاصله بین لوگو و لینک‌ها */
+}
+
+body {
+  font-family: "Morabba-Medium", Tahoma, sans-serif;
+  margin:0;
+  padding:0;
+  direction: rtl;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ابتدا همه وسط */
+  position: relative;
+  padding: 15px 40px;
+  background:#007bff;
+}
+
+/* منو وسط هدر */
+.center-nav {
+  display: flex;
+  gap: 40px; /* فاصله بین لینک‌ها */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* وسط هدر */
+}
+
+.center-nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px 0;
+}
+
+.center-nav a:hover {
+  text-decoration: underline;
+}
+
+/* لوگو سمت راست */
+header .logo {
+  height: 50px;
+  margin-left: auto; /* برای قرار گرفتن سمت راست */
+}
+main{
+  flex : 1;
+  padding-bottom: 20px;
+}
+
+
+html, body{
+height: 100%;
+margin: 0;
+}
+
+footer {
+    background: #007bff;
+    color: white;
+    padding: 20px 20px ;
+    font-family: 'Morabba-Medium';
+    flex: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wr1ap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-info, .footer-links {
+    flex: 1;
+    min-width: 240px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+</style>
+
+<h2>مرحله ۲: آپلود فایل یا وارد کردن توضیحات</h2>
+<div class="step">
+<form id="formStep2">
+<input type="text" id="name" placeholder="نام و نام خانوادگی" required>
+<input type="tel" id="phone" placeholder="شماره تماس" required>
+<select id="serviceSelect" required>
+<option value="">انتخاب نوع خدمت</option>
+<option>چاپ و پرینت</option>
+<option>اسکن</option>
+<option>تایپ</option>
+<option>ترجمه</option>
+<option>ثبت‌نام اینترنتی</option>
+font-family: "Morabba-Medium",
+</select>
+<input type="file" id="fileInput">
+<textarea id="details" placeholder="توضیحات اضافی"></textarea>
+<button type="submit" class="upload-btn" id="nextBtn">مرحله بعد</button>
+</form>
+</div>
+
+<script>
+const form = document.getElementById('formStep2');
+const nextBtn = document.getElementById('nextBtn');
+
+// پر کردن فرم با داده‌های ذخیره شده
+document.getElementById('name').value = localStorage.getItem('name') || '';
+document.getElementById('phone').value = localStorage.getItem('phone') || '';
+document.getElementById('serviceSelect').value = localStorage.getItem('serviceType') || '';
+document.getElementById('details').value = localStorage.getItem('details') || '';
+
+function checkForm() {
+    if(document.getElementById('name').value && document.getElementById('phone').value && document.getElementById('serviceSelect').value) {
+        nextBtn.classList.add('active');
+    } else {
+        nextBtn.classList.remove('active');
+    }
+}
+
+['name','phone','serviceSelect','details'].forEach(id => {
+    document.getElementById(id).addEventListener('input', checkForm);
+});
+
+checkForm();
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    localStorage.setItem('name', document.getElementById('name').value);
+    localStorage.setItem('phone', document.getElementById('phone').value);
+    localStorage.setItem('serviceType', document.getElementById('serviceSelect').value);
+    localStorage.setItem('details', document.getElementById('details').value);
+    window.location.href = 'step3.html';
+});
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-info">
+          <h3>کافی‌نت نت‌آویز</h3>
+          <p>آدرس:بهارستان،خیابان الفت‌شرقی،چهارراه آزادی، بازاچه فیروزه، کافی‌نت نت آویز</p>
+          <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+          <p>ایمیل: coffenetaviz@gmail.com</p>
+      </div>
+      <div class="footer-links">
+          <h3>لینک‌های سریع</h3>
+          <ul>
+              <li><a href="index.html" class="btn-primary-fillerd">خانه</a></li>
+              <li><a href="Place An Order/Step1.html" class="btn-primary-fillerd">سفارش آنلاین</a></li>
+              <li><a href="../Login Page/login.html" class="btn-primary-fillerd">ورود</a></li>
+              <li><a href="About & Contact/contact.html" class="btn-primary-fillerd">تماس با ما</a></li>
+              <li><a href="About & Contact/about.html" class="btn-primary-fillerd">درباره ما</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>© 2025 کافی‌نت نت‌آویز؛ همه حقوق محفوظ است.</p>
+  </div>
+</footer>
+
+</body>
+</html>
