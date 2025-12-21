@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات کافی‌نت نت‌آویز</title>
+
+    <link rel="stylesheet" href="Style-Css/style.css">
+    <link rel="stylesheet" href="Style-Css/color-light.css">
+
+    <style>
+        @font-face {
+            font-family: "Morabba-Medium";
+            src: url("Font/Morabba-Medium.ttf") format("truetype");
+        }
+        body {
+            font-family: "Morabba-Medium", Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main { flex: 1; }
+
+        /* هدر یکپارچه */
+        header {
+            background: var(--md-sys-color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,.15);
+            position: relative;
+        }
+       
+        header img {
+            height: 44px; /* لوگو کنترل‌شده */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 12px;
+        }
+        nav a {
+            color: var(--md-sys-color-on-primary);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: background .2s;
+        }
+        nav a.active,
+        nav a:hover {
+            background: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+        }
+
+        /* Grid کارت‌ها */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: var(--md-sys-color-surface-container-low);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.2rem 1rem;
+            transition: transform .25s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,.12);
+        }
+        .service-card img.thumb {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: .8rem;
+            /* اگر placeholder خارجی باز هم لود نشد، لوگوی خودت رو جایگزین کن */
+        }
+        .service-card h3 {
+            margin: .4rem 0 .6rem;
+            color: var(--md-sys-color-primary);
+        }
+        .service-card p {
+            font-size: .9rem;
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        .service-card .price {
+            font-weight: bold;
+            color: var(--md-sys-color-secondary);
+            margin-bottom: 1rem;
+        }
+        .service-card .btn-primary-filled {
+            width: 100%;
+        }
+
+        /* فوتر یکپارچه */
+        footer {
+            background: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            padding: 20px;
+            text-align: center;
+            font-size: .9rem;
+        }
+        .footer-links ul li a {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <a href="index.html" class="logo">
+        <img src="Image/image.png" alt="لوگو">
+      </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="Place An Order/Step1.html">سفارش آنلاین</a></li>
+            <li><a href="services-grid.html" class="active">خدمات ما</a></li>
+            <li><a href="About & Contact/about.html">درباره ما</a></li>
+            <li><a href="About & Contact/contact.html">تماس با ما</a></li>
+            <li><a href="Login Page/login.html">ورود</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1 style="text-align:center; margin-top:2rem; color:var(--md-sys-color-primary)">لیست خدمات کافی‌نت نت‌آویز</h1>
+
+    <section class="services-grid">
+        <!-- کارت 1 -->
+        <article class="service-card">
+            <!-- تصویر لوکال جایگزین placeholder؛ اگر خواستی همین مسیر رو استفاده کن -->
+            <img src="Image/print.jpg" class="thumb" alt="چاپ و پرینت">
+            <h3>چاپ و پرینت</h3>
+            <p>چاپ رنگی و سیاه‌وسفید با بالاترین کیفیت و در کمترین زمان</p>
+            <div class="price">از ۲٬۰۰۰ تومان</div>
+            <button class="btn-primary-filled">سفارش</button>
+        </article>
+
+        <!-- کارت 2 -->
+        <article class="service-card">
+            <img src="Image/scanner.png" class="thumb" alt="اسکن">
+            <h3>اسکن</h3>
+            <p>اسکن با رزولوشن بالا و ذخیره‌سازی در فرمت‌های مختلف</p>
+            <div class="price">از ۱٬۰۰۰ تومان</div>
+            <button class="btn-primary-filled">سفارش</button>
+        </article>
+
+        <!-- کارت 3 -->
+        <article class="service-card">
+            <img src="Image/type.png" class="thumb" alt="تایپ">
+            <h3>تایپ فارسی و انگلیسی</h3>
+            <p>تایپ حرفه‌ای متون دانشجویی، قراردادی و اداری</p>
+            <div class="price">از ۵٬۰۰۰ تومان</div>
+            <button class="btn-primary-filled">سفارش</button>
+        </article>
+
+        <!-- کارت 4 -->
+        <article class="service-card">
+            <img src="Image/translate.png" class="thumb" alt="ترجمه">
+            <h3>ترجمه متون</h3>
+            <p>ترجمه تخصصی انگلیسی به فارسی و برعکس با کیفیت عالی</p>
+            <div class="price">از ۱۰٬۰۰۰ تومان</div>
+            <button class="btn-primary-filled">سفارش</button>
+        </article>
+
+        <!-- کارت 5 -->
+        <article class="service-card">
+            <img src="Image/register.png" class="thumb" alt="ثبت‌نام اینترنتی">
+            <h3>ثبت‌نام اینترنتی</h3>
+            <p>ثبت‌نام در سامانه‌های دانشگاهی، آزمون‌ها و فرم‌های دولتی</p>
+            <div class="price">از ۱۵٬۰۰۰ تومان</div>
+            <button class="btn-primary-filled">سفارش</button>
+        </article>
+
+        <!-- کارت 6 -->
+        <article class="service-card">
+            <img src="Image/Eshterak.png" class="thumb" alt="اشتراک ماهانه">
+            <h3>اشتراک چاپ رایگان</h3>
+            <p>با خرید اشتراک ماهانه، تا ۲۰۰ صفحه چاپ رایگان داشته باشید</p>
+            <div class="price">۱۲۰٬۰۰۰ تومان / ماه</div>
+            <button class="btn-primary-filled">خرید اشتراک</button>
+        </article>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>کافی‌نت نت‌آویز</h3>
+            <p>آدرس: بهارستان، خیابان الفت‌شرقی، چهارراه آزادی، بازارچه فیروزه</p>
+            <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+            <p>ایمیل: coffenetaviz@gmail.com</p>
+        </div>
+        <div class="footer-links">
+            <h3>لینک‌های سریع</h3>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="Place An Order/Step1.html">سفارش آنلاین</a></li>
+                <li><a href="services-grid.html">خدمات ما</a></li>
+                <li><a href="About & Contact/contact.html">تماس با ما</a></li>
+                <li><a href="About & Contact/about.html">درباره ما</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 کافی‌نت نت‌آویز؛ همه حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+</body>
+</html>

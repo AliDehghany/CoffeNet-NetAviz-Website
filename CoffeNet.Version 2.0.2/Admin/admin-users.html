@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت کاربران | نت‌آویز</title>
+    <link rel="stylesheet" href="../Style-Css/style.css">
+    <link rel="stylesheet" href="../Style-Css/color-light.css">
+    <style>
+        @font-face{font-family:"Morabba-Medium";src:url("../Font/Morabba-Medium.ttf")}
+        
+body{font-family:"Morabba-Medium",Tahoma,sans-serif;
+        margin:0;
+        padding:0;
+        direction:rtl;
+        background:var(--md-sys-color-background);
+        color:var(--md-sys-color-on-background);
+        min-height:100vh;
+        display:flex;
+        flex-direction:column}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;   /* ← اضافه کن */
+    padding: 12px 24px;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+header ul {              /* ← اضافه کن */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    list-style: none;
+    transform: translate(-50%, -50%);
+}
+
+        main{flex:1;
+            max-width:1100px;
+            margin:0 auto;
+            padding:2rem}
+
+        h1{text-align:center;
+            color:var(--md-sys-color-primary)}
+
+        .mTable{width:100%;
+            border-collapse:collapse;
+            border-radius:8px;overflow:hidden;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+            background:var(--md-sys-color-surface-container-low)}
+
+        .mTable thead{background:var(--md-sys-color-primary);
+            color:var(--md-sys-color-on-primary)}
+
+        .mTable th,.mTable td{padding:.75rem 1rem;
+            text-align:center;
+            font-size:.9rem}
+            
+        .mTable tbody tr:nth-child(even){background:var(--md-sys-color-surface-container-lowest)}
+        .mTable tbody tr:hover{background:var(--md-sys-color-surface-container-high)}
+        .status{padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:bold}
+        .status.active{background:#4caf50;color:#fff}
+        .status.inactive{background:#9e9e9e;color:#fff}
+        footer{background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary);text-align:center;padding:12px;font-size:.85rem}
+    </style>
+</head>
+<body>
+<header style="display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary)">
+    <img src="../Image/image.png" alt="لوگو" style="height:44px">
+    <nav><ul style="list-style:none;display:flex;gap:12px;margin:0"><li><a href="../index.html" style="color:#fff;text-decoration:none">خانه</a></li><li><a href="admin-orders.html" style="color:#fff;text-decoration:none">سفارشات</a></li><li><a href="admin-users.html" style="color:#fff;text-decoration:none" class="active">کاربران</a></li><li><a href="admin-messages.html" style="color:#fff;text-decoration:none">پیام‌ها</a></li></ul></nav>
+</header>
+
+<main>
+    <h1>لیست کاربران</h1>
+    <table class="mTable">
+        <thead>
+            <tr>
+                <th>نام</th><th>موبایل</th><th>ایمیل</th><th>تاریخ عضویت</th><th>وضعیت</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>علی دهقانی</td><td>۰۹۱۳۴۵۶۷۸۹۰</td><td>ali@mail.com</td><td>۱۴۰۲/۱۲/۰۱</td><td><span class="status active">فعال</span></td></tr>
+            <tr><td>زهرا رضایی</td><td>۰۹۱۲۲۳۳۴۴۵۵</td><td>zahra@mail.com</td><td>۱۴۰۳/۰۵/۱۰</td><td><span class="status inactive">غیرفعال</span></td></tr>
+            <tr><td>رضا صادقی</td><td>۰۹۱۴۴۵۵۶۶۷۷</td><td>reza@mail.com</td><td>۱۴۰۳/۰۷/۱۵</td><td><span class="status active">فعال</span></td></tr>
+            <tr><td>نرگس کریمی</td><td>۰۹۱۵۵۴۴۳۳۲۲</td><td>narges@mail.com</td><td>۱۴۰۳/۱۱/۲۰</td><td><span class="status active">فعال</span></td></tr>
+        </tbody>
+    </table>
+</main>
+
+<footer>© ۲۰۲۵ کافی‌نت نت‌آویز – همه حقوق محفوظ است.</footer>
+</body>
+</html>

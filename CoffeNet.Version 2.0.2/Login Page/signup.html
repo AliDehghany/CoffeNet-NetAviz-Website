@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت‌نام | کافی‌نت NetAviz</title>
+  <style>
+    @font-face {
+      font-family: "Morabba";
+      src: url("../Font/Morabba-Medium.ttf") format("truetype");
+    }
+
+    body {
+      font-family: "Morabba", sans-serif;
+      direction: rtl;
+      background-color: #f6f7fb;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header img {
+      width: 90px;
+      height: auto;
+    }
+
+    form {
+      background-color: #fff;
+      width: 340px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: right;
+    }
+
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    legend {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0d6efd;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 15px;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../Image/image.png" alt="لوگوی کافی‌نت NetAviz">
+    <h2>کافی‌نت NetAviz</h2>
+  </header>
+
+  <form>
+    <fieldset>
+      <legend>ثبت‌نام در سایت</legend>
+      <label for="fullname">نام کامل:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="mobile">شماره موبایل:</label>
+      <input type="tel" id="mobile" name="mobile" required>
+
+      <label for="email">ایمیل:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">رمز عبور:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm">تکرار رمز عبور:</label>
+      <input type="password" id="confirm" name="confirm" required>
+
+      <button class="btn-primary-filled">ثبت نام</button>
+      <a href="login.html" class="btn-primary-fillerd">حساب دارید؟ ورود به سایت</a>
+    </fieldset>
+  </form>
+</body>
+</html>
